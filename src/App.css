@@ -1,0 +1,93 @@
+/* The container that holds the entire page, excluding the sidebar */
+.page-component {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  height: 100vh;
+  width: 85%;
+  margin-left: 15%;
+  position: relative; /* Ensures it ignores the menu button */
+}
+
+
+/* side nav */
+.disabled-link {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.settings-button {
+  width: 100%
+}
+
+/* timer page */
+.button-wrapper {
+  display: flex;
+  gap: 15px; /* adding space between the buttons */
+}
+
+.timer-wrapper {
+  margin-bottom: 20px; /* adds margin between the timer circle and the buttons */
+  text-align: center;
+}
+
+.timer-number {
+  font-size: 5vw;
+  font-weight: 500;
+  margin: 0px;
+}
+
+
+.timer-mode-label {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin: 0px;
+}
+
+#session-counter {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+/* settings page */
+.settings {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  gap: 5vh
+}
+
+
+/* mobile version placed here to prevent override */
+@media screen and (max-width: 768px) {
+  .page-component {
+    width: 100%; /* Take full width when sidebar is closed */
+    margin-left: 0;
+  }
+
+  .timer-number {
+    font-size: 15vw;
+    font-weight: 500;
+    margin: 0px;
+  }
+  
+  
+  .timer-mode-label {
+    font-size: 7.5vw;
+    font-weight: 500;
+    margin: 0px;
+  }
+  
+  #session-counter {
+    font-size: 5vw;
+    font-weight: 500;
+  }
+
+  .settings {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    gap: 5vh
+  }
+}
